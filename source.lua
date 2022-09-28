@@ -18,6 +18,8 @@ function rogui:DataFrame(obj, gui)
 	
 	local frame = Instance.new("Frame", gui)
 	frame.Name = "DataFrame"
+	frame.BackgroundColor3 = Color3.new(0.1,0.1,0.1)
+	frame.BackgroundTransparency = 0.5
 	frame.Size = UDim2.new(0,150,0,125)
 	frame.Position = UDim2.new(0,0,0,0)
 	local text = Instance.new("TextLabel", frame)
