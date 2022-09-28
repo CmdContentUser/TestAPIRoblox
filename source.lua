@@ -3,6 +3,7 @@ local CoreGui = game:GetService("CoreGui")
 local mouse = game:GetService("Players").LocalPlayer:GetMouse()
 local rogui = {}
 
+
 function rogui:FollowMouse(NewUi)
 	local mouseLocation = UserInputService:GetMouseLocation()
 	if NewUi:IsA("TextLabel") or NewUi:IsA("TextButton") or NewUi:IsA("TextBox") then
