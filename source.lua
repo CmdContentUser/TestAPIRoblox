@@ -49,7 +49,6 @@ function rogui:DataFrame(obj)
 end
 
 function rogui:DragGuiObject(obj)
-	assert(obj ~= nil, "The object you have passed through this function is \"nil\".")
 
 	function dr(gui)
 		task.spawn(function()
