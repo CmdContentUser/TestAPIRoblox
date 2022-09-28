@@ -3,6 +3,10 @@ local CoreGui = game:GetService("CoreGui")
 local mouse = game:GetService("Players").LocalPlayer:GetMouse()
 local rogui = {}
 
+function rogui:FollowMouse(NewUi)
+  local mouseLocation = UIS:GetMouseLocation()
+	NewUI.Position = UDim2.new(0, mouseLocation.X+NewUI.TextBounds.X/2, 0, mouseLocation.Y-36)
+end
 function rogui:DataFrame(obj)
   local frame = Instance.new("Frame", gui)
   frame.Size = UDim2.new(0,150,0,125)
