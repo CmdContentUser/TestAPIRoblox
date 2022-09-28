@@ -5,7 +5,11 @@ local rogui = {}
 
 function rogui:FollowMouse(NewUi)
 	local mouseLocation = UserInputService:GetMouseLocation()
-	NewUI.Position = UDim2.new(0, mouseLocation.X+NewUI.TextBounds.X/2, 0, mouseLocation.Y-36)
+	if NewUi:IsA("TextLabel") or NewUi:IsA("TextButton") or NewUi:IsA("TextBox") then
+		NewUi.Position = UDim2.new(0, mouseLocation.X+NewUi.TextBounds.X/2, 0, mouseLocation.Y-36)
+	else
+		NewUi.Position = UDim2.new(0, mouseLocation.X+NewUi.AbsoluteSize.X/2, 0, mouseLocation.Y-36)
+	end
 end
 function rogui:DataFrame(obj)
 	local frame = Instance.new("Frame", gui)
