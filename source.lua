@@ -12,7 +12,12 @@ function rogui:FollowMouse(NewUi)
 	end
 end
 function rogui:DataFrame(obj, gui)
+	if gui:FindFirstChild("DataFrame") then
+		gui.DataFrame:Destroy()
+	end
+	
 	local frame = Instance.new("Frame", gui)
+	frame.Name = "DataFrame"
 	frame.Size = UDim2.new(0,150,0,125)
 	frame.Position = UDim2.new(0,0,0,0)
 	local text = Instance.new("TextLabel", frame)
