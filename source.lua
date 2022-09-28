@@ -1,10 +1,11 @@
 local UserInputService = game:GetService("UserInputService")
+local UIS = UserInputService
 local CoreGui = game:GetService("CoreGui")
 local mouse = game:GetService("Players").LocalPlayer:GetMouse()
 local rogui = {}
 
 function rogui:FollowMouse(NewUi)
-	local mouseLocation = game:GetService("UserInputService"):GetMouseLocation()
+	local mouseLocation = UserInputService:GetMouseLocation()
 	NewUI.Position = UDim2.new(0, mouseLocation.X+NewUI.TextBounds.X/2, 0, mouseLocation.Y-36)
 end
 function rogui:DataFrame(obj)
