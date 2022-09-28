@@ -8,7 +8,7 @@ function rogui:FollowMouse(NewUi)
 	if NewUi:IsA("TextLabel") or NewUi:IsA("TextButton") or NewUi:IsA("TextBox") then
 		NewUi.Position = UDim2.new(0, mouseLocation.X+NewUi.TextBounds.X/2, 0, mouseLocation.Y-36)
 	else
-		NewUi.Position = UDim2.new(0, mouseLocation.X+NewUi.AbsoluteSize.X/2, 0, mouseLocation.Y-36)
+		NewUi.Position = UDim2.new(0, mouseLocation.X--[[+NewUi.AbsoluteSize.X/2]], 0, mouseLocation.Y-36)
 	end
 end
 function rogui:DataFrame(obj, gui)
