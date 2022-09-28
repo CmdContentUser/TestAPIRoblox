@@ -1,5 +1,4 @@
 local UserInputService = game:GetService("UserInputService")
-local UIS = UserInputService
 local CoreGui = game:GetService("CoreGui")
 local mouse = game:GetService("Players").LocalPlayer:GetMouse()
 local rogui = {}
