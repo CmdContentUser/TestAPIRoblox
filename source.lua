@@ -1,5 +1,47 @@
 local UserInputService = game:GetService("UserInputService")
+local CoreGui = game:GetService("CoreGui")
+local mouse = game:GetService("Players").LocalPlayer:GetMouse()
 local rogui = {}
+
+function rogui:DataFrame(obj)
+  local frame = Instance.new("Frame", gui)
+  frame.Size = UDim2.new(0,150,0,125)
+  frame.Position = UDim2.new(0,0,0,0)
+  local text = Instance.new("TextLabel", frame)
+  text.Size = UDim2.new(1,0,0.1,0)
+  text.BackgroundTransparency = 1
+  text.Font = Enum.Font.ArialBold
+  text.Text = 'Size: '..tostring(obj.Size)
+  text.TextColor3 = Color3.new(1,1,1)
+  text.TextScaled = true
+
+  local text = Instance.new("TextLabel", frame)
+  text.Size = UDim2.new(1,0,0.1,0)
+  text.Position = UDim2.new(0,0,0.1,0)
+  text.BackgroundTransparency = 1
+  text.Font = Enum.Font.ArialBold
+  text.Text = 'Position: '..tostring(obj.Position)
+  text.TextColor3 = Color3.new(1,1,1)
+  text.TextScaled = true
+
+  local text = Instance.new("TextLabel", frame)
+  text.Size = UDim2.new(1,0,0.1,0)
+  text.Position = UDim2.new(0,0,0.2,0)
+  text.BackgroundTransparency = 1
+  text.Font = Enum.Font.ArialBold
+  text.Text = 'Name: '..tostring(obj.Name)
+  text.TextColor3 = Color3.new(1,1,1)
+  text.TextScaled = true
+
+  local text = Instance.new("TextLabel", frame)
+  text.Size = UDim2.new(1,0,0.1,0)
+  text.Position = UDim2.new(0,0,0.3,0)
+  text.BackgroundTransparency = 1
+  text.Font = Enum.Font.ArialBold
+  text.Text = 'Anchor Point: '..tostring(obj.AnchorPoint)
+  text.TextColor3 = Color3.new(1,1,1)
+  text.TextScaled = true
+end
 
 function rogui:DragGuiObject(obj)
   assert(obj ~= nil, "The object you have passed through this function is \"nil\".")
