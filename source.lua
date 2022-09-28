@@ -12,7 +12,7 @@ function rogui:FollowMouse(NewUi)
 		NewUi.Position = UDim2.new(0, mouseLocation.X+NewUi.AbsoluteSize.X/2, 0, mouseLocation.Y-36)
 	end
 end
-function rogui:DataFrame(obj)
+function rogui:DataFrame(obj, gui)
 	local frame = Instance.new("Frame", gui)
 	frame.Size = UDim2.new(0,150,0,125)
 	frame.Position = UDim2.new(0,0,0,0)
